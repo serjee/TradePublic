@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Индикатор MT4 для бинарных опционов BinaryManagerPA</title>
+    <meta name="description" content="Самый точный индикатор MT4 для бинарных опционов BinaryManagerPA позволяет заранее рассчитать процент успешного исхода сделки для выбранной валютной пары и таймфрейма.">
+    
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans|Candal|Alegreya+Sans">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/imagehover.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+	
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-41381900-12', 'auto');
+	  ga('send', 'pageview');
+
+	</script>
+  </head>
+  
+  <body>
+    <!--Navigation bar-->
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+		<h1>Индикатор бинарных опционов <span>BinaryManagerPA</span></h1>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#feature">Преимущества</a></li>
+          <li><a href="#faculity-member">Отзывы</a></li>
+          <li class="btn-trial"><a href="https://www.mql5.com/ru/market/product/21916" target="_blank">Скачать для MT4</a></li>
+        </ul>
+        </div>
+      </div>
+    </nav>
+    <!--/ Navigation bar-->
+
+    <!--Banner-->
+    <div id ="banner" class="banner">
+      <div class="bg-color">
+        <div class="container">
+          <div class="row">
+            <div class="banner-text text-center">
+              <div class="text-border">
+                <h2 class="text-dec">Основан на лучшей стратегии бинарных опционов</h2>
+              </div>
+              <div class="intro-para text-center quote">
+                <p class="big-text">Точность сигналов индикатора составляет до 98%.</p>
+                <p class="small-text">Анализирует текущий рынок на выбранной валютной паре и заранее сообщает вероятность выигрыша.<br>Вы выбираете лучшие условия для торговли уже до использования индикатора!</p>
+                <a href="https://www.mql5.com/ru/market/product/21916" target="_blank" class="btn">СКАЧАТЬ ДЛЯ МТ4</a>
+              </div>
+              <a href="#feature" class="mouse-hover"><div class="mouse"></div></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--/ Banner-->
+	
+    <!--Feature-->
+    <section id ="feature" class="section-padding">
+      <div class="container">
+        <div class="row">
+          <div class="header-section text-center">
+            <h2>Преимущества индикатора МТ4 для бинарных опционов</h2>
+            <p>Заранее определяет лучшие условия для торговли, при использовании данного индикатора. Выдает наиболее точные сигналы<br> для открытия сделок с целью минимизации рисков.</p>
+            <hr class="bottom-line">
+          </div>
+          <div class="feature-info">
+            <div class="fea">
+              <div class="col-md-4">
+                <div class="heading pull-right">
+                  <h4>Использует PriceAction</h4>
+                  <p>Для прогноза рынка, только цена имеет значение, а не ее история. Именно поэтому индикатор работает на основе PriceAction.</p>
+                </div>
+                <div class="fea-img pull-left">
+                  <i class="fa fa-drupal"></i>
+                </div>
+              </div>
+            </div>
+            <div class="fea">
+              <div class="col-md-4">
+                <div class="heading pull-right">
+                  <h4>Заранее сообщает % успеха</h4>
+                  <p>Рынок меняется. Индикатор постоянно его анализирует и сообщает вероятность успеха выявленных сигналов.</p>
+                </div>
+                <div class="fea-img pull-left">
+                  <i class="fa fa-trophy"></i>
+                </div>
+              </div>
+            </div>
+            <div class="fea">
+              <div class="col-md-4">
+                <div class="heading pull-right">
+                  <h4>Уведомляет через PUSH и ALERT</h4>
+                  <p>Настройте получение сигналов индикатора на мобильный телефон через PUSH или оповещение в терминале MetaTrader4.</p>
+                </div>
+                <div class="fea-img pull-left">
+                  <i class="fa fa-css3"></i>
+                </div>
+              </div>
+            </div>
+        </div>
+        </div>
+      </div>
+    </section>
+    <!--/ feature-->
+	
+	<!--Cta-->
+    <section id="cta-2">
+      <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+              <h2>Принцип работы индикатора</h2>
+              <p>Индикатор BinaryManagerPA определяет сигналы по паттернам PriceAction, используя сложный алгоритм их фильтрации и подтверждения сигнала. Благодаря этому, точность сигналов во многом увеличивается.</p>
+			  <p>Для каждого сигнала индикатор рассчитывает вероятность успешного исхода сделки в % процентах, чтобы вы оценили степень риска и приняли решение открывать сделку или нет.</p>
+			  <p>Вам не обязательно следить за появлением сигнала от индикатора в терминале MetaTrader4. Индикатор сам отправит вам сообщение в терминал со звуковым оповещением, либо отправит PUSH-уведомление на мобильный телефон, на котором установлено мобильное приложение MetaTrader4.</p>
+            </div>
+			<div class="col-md-6">
+			  <img src="img/example1.png" alt="" class="img-thumbnail">
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--/ Cta-->
+	
+    <!--Settigns-->
+    <section id ="settigns" class="section-padding">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <img src="img/settings.png" alt="" class="img-thumbnail">
+          </div>
+          <div class="col-md-6">
+            <div class="detail-info">
+              <hgroup>
+                <h3 class="det-txt">Настройки индикатора</h3>
+              </hgroup>
+			  <p><span class="label label-success">[1/2/3 case] Number of expiration candles</span> - количество свечей экспирации для расчета результата и вероятности по каждому сигналу индикатора;<br />
+			  <span class="label label-success">Number of candles from history for calc %WinRate</span> - количество свечей из истории, по которым проводится анализ и расчет результатов;<br />
+			  <span class="label label-success">Signal_1 (based on PA)</span> - включить/выключить определение сигналов на базе PriceAction;<br />
+			  <span class="label label-success">Confirm Signal_1</span> - включить/выключить проверку подтверждения сигнала Signal_1;<br />
+			  <span class="label label-success">Signal_2 (based on Indicators)</span> - включить/выключить определение сигналов на базе индикаторов;<br />
+			  <span class="label label-success">Confirm Signal_2</span> - включить/выключить проверку подтверждения сигнала Signal_2;<br />
+			  <span class="label label-success">Interval of display arrow near signal</span> - интервал смещения стрелки CALL/PUT от свечи, при появлении сигнала;<br />
+			  <span class="label label-success">Offset for text near arrow</span> - интервал смещения PUT текста % вероятности от свечи (взаимосвязан с предыдущим параметром);</p>
+            </div>
+          </div>
+        </div>
+		<div class="row">
+			<div class="col-md-12">
+				<p>
+			  <span class="label label-success">Signal alert</span> - включает/выключает оповещение о появлении сигнала в терминале MetaTrader;<br />
+			  <span class="label label-success">Signal push</span> - включает/выключает оповещение о появлении сигнала через PUSH-уведомление в мобильном телефоне;<br />
+			  <span class="label label-success">Allow trading time</span> - устанавливает время, в которое разрешено получать сигналы от индикатора;<br />
+			  <span class="label label-success">Bind text corner</span> - расположение текста статистики в окне индикатора (справа или слева);<br />
+			  <span class="label label-success">Color for corner text</span> - цвет уголового информационного текста индикатора;<br />
+			  <span class="label label-success">Color for text above signal arrow</span> - цвет информационного текста над свечой (медвежий сигнал);<br />
+			  <span class="label label-success">Color for text under signal arrow</span> - цвет информационного текста под свечой (бычий сигнал).
+				</p>
+			</div>
+		</div>
+      </div>
+    </section>
+    <!--/ Settigns-->
+    
+    <!--work-shop-->
+    <section id="work-shop" class="section-padding">
+      <div class="container">
+        <div class="row">
+          <div class="header-section text-center">
+            <h2>Правила торговли и риск-менеджмента при использовании индикатора</h2>
+			<p>Данный индикатор не является "волшебным" средством обогащения,<br> поэтому, используйте его с соблюдением необходимых правил торговли и риск-менеджмента.</p>
+            <hr class="bottom-line">
+          </div>
+          <div class="col-md-12">
+            <div class="bs-callout bs-callout-danger">
+				<p>Вы можете использовать данный индикатор на любых таймфреймах и валютных парах, но помните, что как и все другие индикаторы, он имеет особенность в том, что чем ниже таймфрейм вы выбираете, тем ниже будет надежность сигналов. Рекомендуется  использовать индикатор для таймфреймов от М15 и выше. Помните, - чем выше таймфрейм, тем лучше сигнал.</p>
+			</div>
+			<div class="bs-callout bs-callout-danger">
+				<p>При установке индикатора на выбранную валютную пару и таймфрейм, он покажет вероятность успешного исхода сделок с выбранной экспирацией. Если индикатор показывает вероятность менее 65%, то не рекомендуется в данный момент использовать его для выбранной валютной пары и таймфейма, пока ситуация на рынке не поменяется. Рекомендуется выбрать другой инструмент и таймфрейм для торговли.</p>
+			</div>
+			<div class="bs-callout bs-callout-danger">
+				<p>Для торговле в интрадей (выбранный таймфрейм меньше дневного), не рекомендуется использовать индикатор на рынке, на котором очень низкая, или наоборот, очень высокая волатильность. Низкая волатильность может наблюдаться в ночные часы, а высокая, при выходе важных новостей. Обычно в такое время цена ведет себя не предсказуемо, ее движение в каком-либо направлении хаотичное, а размер свечей минимален, при низкой волатильности и огромный, при высокой. По наблюдениям, в такие часы индикатор может выдавать много ложных сигналов, не смотря на выдаваемый процент прогноза.</p>
+			</div>
+			<div class="bs-callout bs-callout-danger">
+				<p>Всегда используйте равную сумму ставки, максимальный размер которой не должен превышать 1% от суммы вашего депозита, не зависимо от того, какой процент успешного исхода сделки показал вам индикатор. При торговле рискуйте только теми деньгами, которые готовы потерять.</p>
+			</div>
+			<div class="bs-callout bs-callout-danger">
+				<p>Игнорируйте сигналы, которые идут против сильных трендов и уровней поддержки и сопротивления. В такие моменты лучше дождаться подтверждения смены направления, либо воздержаться от торговли.</p>
+			</div>
+        </div>
+      </div>
+    </section>
+    <!--/ work-shop-->
+	
+    <!--Faculity member-->
+    <section id="faculity-member" class="section-padding">
+      <div class="container">
+        <div class="row">
+          <div class="header-section text-center">
+            <h2>Отзывы об индикаторе для бинарных опционов</h2>
+            <p>Нам важно каждое ваше мнение и отзыв об индикаторе бинарных опционов BinaryManagerPA,<br> с целью постоянного его улучшения.</p>
+            <hr class="bottom-line">
+          </div>
+		  <div class="panel panel-default">
+                <div class="panel-heading">Что говорят об индикаторе ?
+                    <div class="floatright"><span class="hidden-xs hidden-md">Автоматически загружать комментарии ?  </span>
+                        <div class="material-switch pull-right">
+                            <input id="comment_load" name="comment_load" type="checkbox" />
+                            <label for="comment_load" class="label-success"></label>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-body">
+                    <button class="show-comments btn btn-default btn-lg btn-block"> Просмотр отзывов <span class="disqus-comment-count" data-disqus-url="http://indicatorbinary.ru/"></span></button> 
+                    <div id="disqus_thread"></div>
+                </div>
+		  </div>
+        </div>
+      </div>
+    </section>
+    <!--/ Faculity member-->
+
+    <!--Pricing-->
+    <section id ="pricing" class="section-padding">
+      <div class="container">
+        <div class="row">
+          <div class="header-section text-center">
+            <h2>Цена аренды индикатора</h2>
+            <p>Разработка данного индикатора заняла более 3-х лет. В его основе лежит успешная, проверенная временем,<br>стратегия торговли бинарными опционами. Я готов с Вами им поделиться за символическую цену.</p>
+            <hr class="bottom-line">
+          </div>
+          <div class="col-md-3 col-sm-3">
+            <div class="price-table">
+              <!-- Plan  -->
+              <div class="pricing-head">
+                <h4>Триал</h4>
+                <span class="fa fa-usd curency"></span> <span class="amount">0</span> 
+              </div>
+          
+              <!-- Plean Detail -->
+              <div class="price-in mart-15">
+                <a href="https://www.mql5.com/ru/market/product/21916" target="_blank" class="btn btn-bg green btn-block">ПОПРОБОВАТЬ БЕСПЛАТНО</a> 
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-3">
+            <div class="price-table">
+              <!-- Plan  -->
+              <div class="pricing-head">
+                <h4>На 1 месяц</h4>
+                <span class="fa fa-usd curency"></span> <span class="amount">18</span> 
+              </div>
+          
+              <!-- Plean Detail -->
+              <div class="price-in mart-15">
+                <a href="https://www.mql5.com/ru/accounting/buy?id=21916&period=4" target="_blank" class="btn btn-bg yellow btn-block">АРЕНДОВАТЬ</a> 
+              </div>
+            </div>
+          </div>
+		  <div class="col-md-3 col-sm-3">
+            <div class="price-table">
+              <!-- Plan  -->
+              <div class="pricing-head">
+                <h4>На 3 месяца</h4>
+                <span class="fa fa-usd curency"></span> <span class="amount">55</span> 
+              </div>
+          
+              <!-- Plean Detail -->
+              <div class="price-in mart-15">
+                <a href="https://www.mql5.com/ru/accounting/buy?id=21916&period=3" target="_blank" class="btn btn-bg red btn-block">АРЕНДОВАТЬ</a> 
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-3">
+            <div class="price-table">
+              <!-- Plan  -->
+              <div class="pricing-head">
+                <h4>На 6 месяцев</h4>
+                <span class="fa fa-usd curency"></span> <span class="amount">98</span> 
+              </div>
+          
+              <!-- Plean Detail -->
+              <div class="price-in mart-15">
+                <a href="https://www.mql5.com/ru/accounting/buy?id=21916&period=2" target="_blank" class="btn btn-bg red btn-block">АРЕНДОВАТЬ</a> 
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--/ Pricing-->
+	
+    <!--Contact-->
+    <section id ="contact" class="section-padding">
+      <div class="container">
+        <div class="row">
+          <div class="header-section text-center">
+            <h2>Видео торговли с применением индикатора BinaryManagerPA</h2>
+            <p>Для того, чтобы увидеть работу индикатора BinaryManagerPA в реальной торговле и оценить его эффективность,<br> посмотрите, пожалуйста, это видео.</p>
+            <hr class="bottom-line">
+          </div>
+		  <div class="col-md-12 text-center">
+		    <iframe width="853" height="480" src="https://www.youtube.com/embed/22doy1LEziY?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+		  </div>
+          
+        </div>
+      </div>
+    </section>
+    <!--/ Contact-->
+	
+    <!--Footer-->
+    <footer id="footer" class="footer">
+      <div class="container text-center">
+		<div class="credits navbar">
+			<a href="#banner">Главная</a> | 
+			<a href="#feature">Преимущества</a> | 
+			<a href="#cta-2">Принцип работы</a> | 
+			<a href="#settigns">Настройки</a> | 
+			<a href="#work-shop">Правила торговли</a> | 
+			<a href="#faculity-member">Отзывы</a> | 
+			<a href="#pricing">Цены</a> | 
+			<a href="#contact">Видео-обзор</a>
+		</div><br />
+		©2017 INDICATORBINARY.RU
+	  </div>
+    </footer>
+    <!--/ Footer-->
+	<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+    
+    <script src="js/jquery.min.js"></script>
+	<script src="js/jquery.easing.min.js"></script>
+	<script src="js/move-top.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/custom.js"></script>
+	
+	<script src="js/jquery.cookie.js"></script>
+	<script id="dsq-count-scr" src="js/count.js" async></script>
+    
+	<!-- Yandex.Metrika counter -->
+	<script type="text/javascript">
+		(function (d, w, c) {
+			(w[c] = w[c] || []).push(function() {
+				try {
+					w.yaCounter44384842 = new Ya.Metrika({
+						id:44384842,
+						clickmap:true,
+						trackLinks:true,
+						accurateTrackBounce:true,
+						webvisor:true
+					});
+				} catch(e) { }
+			});
+
+			var n = d.getElementsByTagName("script")[0],
+				s = d.createElement("script"),
+				f = function () { n.parentNode.insertBefore(s, n); };
+			s.type = "text/javascript";
+			s.async = true;
+			s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+			if (w.opera == "[object Opera]") {
+				d.addEventListener("DOMContentLoaded", f, false);
+			} else { f(); }
+		})(document, window, "yandex_metrika_callbacks");
+	</script>
+	<noscript><div><img src="https://mc.yandex.ru/watch/44384842" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+	<!-- /Yandex.Metrika counter -->
+  </body>
+</html>
