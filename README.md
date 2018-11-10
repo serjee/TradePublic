@@ -12,3 +12,7 @@ Get last ticks from DB and form candles for different timeframes to DB tables.
 
 # trade.site.landing
 Static promo site for information about binary option indicator.
+
+# trade.bar.synchronizer
+It's old idea to create synchronization between two different apps.
+
